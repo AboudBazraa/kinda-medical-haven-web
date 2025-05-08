@@ -12,9 +12,16 @@ const Index: React.FC = () => {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-12 md:mb-0 animate-fade-up">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Kinda Medical Trading Company
-              </h1>
+              <div className="flex items-center mb-6">
+                <img 
+                  src="/lovable-uploads/1038b500-df4f-4406-a86a-78b88a493244.png" 
+                  alt="Kinda Medical Logo" 
+                  className="h-20 w-auto mr-4"
+                />
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+                  Kinda Medical Trading Company
+                </h1>
+              </div>
               <p className="text-xl mb-8 text-medical-accent">
                 Leading Healthcare Investment in Yemen
               </p>
@@ -33,7 +40,7 @@ const Index: React.FC = () => {
             </div>
             <div className="md:w-1/2 flex justify-center animate-fade-in">
               <img 
-                src="/public/placeholder.svg" 
+                src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200"
                 alt="Healthcare professionals" 
                 className="rounded-lg shadow-xl max-w-full h-auto"
                 style={{ maxHeight: '400px' }}
@@ -56,7 +63,7 @@ const Index: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="/public/placeholder.svg" 
+                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" 
                 alt="About Kinda Medical" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />
@@ -156,7 +163,7 @@ const Index: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <img 
-                src="/public/placeholder.svg" 
+                src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" 
                 alt="Al-Hayat General Hospital" 
                 className="w-full h-48 object-cover"
               />
@@ -173,7 +180,7 @@ const Index: React.FC = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <img 
-                src="/public/placeholder.svg" 
+                src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" 
                 alt="Cardiac Specialty Center" 
                 className="w-full h-48 object-cover"
               />
@@ -190,7 +197,7 @@ const Index: React.FC = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <img 
-                src="/public/placeholder.svg" 
+                src="https://images.unsplash.com/photo-1580281657702-257584239a55?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" 
                 alt="Dialysis Center" 
                 className="w-full h-48 object-cover"
               />

@@ -16,6 +16,11 @@ const Navbar: React.FC = () => {
       <div className="container-custom py-4 flex items-center justify-between">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/1038b500-df4f-4406-a86a-78b88a493244.png" 
+              alt="Kinda Medical Logo" 
+              className="h-8 w-auto mr-2"
+            />
             <span className="text-xl font-bold text-medical-primary">Kinda Medical</span>
             <span className="text-medical-gray text-sm ml-2 hidden md:inline">Trading Company</span>
           </Link>

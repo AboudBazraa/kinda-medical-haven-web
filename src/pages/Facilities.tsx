@@ -7,7 +7,7 @@ const Facilities: React.FC = () => {
     {
       name: "Al-Hayat General Hospital",
       description: "A comprehensive healthcare facility providing a wide range of medical services including emergency care, surgery, internal medicine, pediatrics, obstetrics, and more.",
-      image: "/public/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
       location: "Seiyun, Hadramout, Yemen",
       contact: "+967 123 456 789",
       hours: "24/7 Emergency Services",
@@ -16,7 +16,7 @@ const Facilities: React.FC = () => {
     {
       name: "Cardiac Specialty Center",
       description: "Specialized center for the diagnosis and treatment of heart diseases, equipped with modern cardiac catheterization labs, ECG, echocardiography, and staffed by experienced cardiologists.",
-      image: "/public/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
       location: "Seiyun, Hadramout, Yemen",
       contact: "+967 123 456 790",
       hours: "8:00 AM - 5:00 PM, Sunday to Thursday",
@@ -25,7 +25,7 @@ const Facilities: React.FC = () => {
     {
       name: "Dialysis Center",
       description: "Modern facility providing dialysis services for patients with kidney diseases, equipped with latest dialysis machines and staffed by nephrologists and specialized nurses.",
-      image: "/public/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1580281657702-257584239a55?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
       location: "Seiyun, Hadramout, Yemen",
       contact: "+967 123 456 791",
       hours: "7:00 AM - 11:00 PM, Daily",
@@ -34,7 +34,7 @@ const Facilities: React.FC = () => {
     {
       name: "Maternal & Child Health Center",
       description: "Specialized center for maternal and child health services, providing prenatal care, delivery services, postnatal care, and pediatric services.",
-      image: "/public/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1631815588090-d1bcbe9a88b1?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
       location: "Seiyun, Hadramout, Yemen",
       contact: "+967 123 456 792",
       hours: "8:00 AM - 8:00 PM, Daily",
@@ -43,7 +43,7 @@ const Facilities: React.FC = () => {
     {
       name: "Specialty Surgical Center",
       description: "Advanced surgical center equipped for various surgical procedures including general surgery, orthopedics, ENT, ophthalmology, and more.",
-      image: "/public/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1626498733722-7894968cd7bf?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
       location: "Seiyun, Hadramout, Yemen",
       contact: "+967 123 456 793",
       hours: "8:00 AM - 6:00 PM, Sunday to Thursday",
@@ -52,7 +52,7 @@ const Facilities: React.FC = () => {
     {
       name: "Rehabilitation Center",
       description: "Comprehensive rehabilitation facility offering physical therapy, occupational therapy, speech therapy, and other rehabilitation services.",
-      image: "/public/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
       location: "Seiyun, Hadramout, Yemen",
       contact: "+967 123 456 794",
       hours: "8:00 AM - 5:00 PM, Sunday to Thursday",
@@ -65,10 +65,19 @@ const Facilities: React.FC = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-medical-dark to-medical-primary text-white py-16">
         <div className="container-custom">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-up">Our Healthcare Facilities</h1>
-          <p className="text-xl max-w-2xl animate-fade-up">
-            Modern, well-equipped healthcare facilities providing quality care to communities across Yemen.
-          </p>
+          <div className="flex items-center">
+            <img 
+              src="/lovable-uploads/1038b500-df4f-4406-a86a-78b88a493244.png" 
+              alt="Kinda Medical Logo" 
+              className="h-16 w-auto mr-4"
+            />
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-up">Our Healthcare Facilities</h1>
+              <p className="text-xl max-w-2xl animate-fade-up">
+                Modern, well-equipped healthcare facilities providing quality care to communities across Yemen.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
