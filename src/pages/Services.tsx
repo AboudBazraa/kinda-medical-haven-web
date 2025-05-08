@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Hospital, Stethoscope, Building, Users, Briefcase, Shield, Microscope, Heartbeat } from 'lucide-react';
+import { Hospital, Stethoscope, Building, Users, Briefcase, Shield, Microscope, Heart } from 'lucide-react';
 
 const Services: React.FC = () => {
   return (
@@ -152,7 +151,7 @@ const Services: React.FC = () => {
 
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
               <div className="w-16 h-16 bg-medical-light text-medical-primary rounded-full flex items-center justify-center mb-6 mx-auto">
-                <Heartbeat className="h-8 w-8" />
+                <Heart className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-medical-dark">Preventive Healthcare</h3>
               <p className="text-medical-gray">
