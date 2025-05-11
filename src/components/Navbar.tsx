@@ -35,12 +35,12 @@ const Navbar: React.FC = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`overflow-hidden sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/70 shadow-md backdrop-blur-sm"
-          : "bg-gradient-to-r from-medical-dark to-medical-primary"
+        isScrolled ? "bg-white/60 shadow-md backdrop-blur-md" : ""
       }`}
+      role="navigation"
+      aria-label="Main Navigation"
     >
-      <div className="container-custom py-4 flex items-center justify-between">
+      <div className="px-20 py-3 flex items-center justify-between">
         <motion.div
           className="flex items-center"
           whileHover={{ scale: 1.03 }}
@@ -49,41 +49,38 @@ const Navbar: React.FC = () => {
           <Link to="/" className="flex items-center">
             <img
               src="/lovable-uploads/1038b500-df4f-4406-a86a-78b88a493244.png"
-              alt="Kinda Medical Logo"
+              alt="MediGlobal Logo"
               className="h-10 w-auto mr-2"
             />
-            <span className="text-xl font-bold text-medical-primary">
-              Kinda Medical
-            </span>
-            <span className="text-medical-gray text-sm ml-2 hidden md:inline">
+            <span className="text-xl font-bold text-[#007BFF]">MediGlobal</span>
+            <span className="text-gray-600 text-sm ml-2 hidden md:inline">
               Trading Company
             </span>
           </Link>
         </motion.div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-7">
           {[
             { path: "/", label: "Home" },
-            { path: "/about", label: "About Us" },
             { path: "/services", label: "Services" },
+            { path: "/about", label: "About Us" },
             { path: "/facilities", label: "Facilities" },
             { path: "/contact", label: "Contact" },
           ].map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className={`relative  ${
-                isScrolled ? "text-medical-darkGray" : "text-white"
-              } hover:text-medical-primary transition duration-300 py-1 ${
-                isActive(item.path) ? "text-medical-primary font-medium" : ""
+              className={`relative text-gray-700 hover:text-[#007BFF] transition duration-300 py-1 ${
+                isActive(item.path) ? "text-[#007BFF] font-medium" : ""
               }`}
+              aria-current={isActive(item.path) ? "page" : undefined}
             >
               {item.label}
               {isActive(item.path) && (
                 <motion.div
                   layoutId="navbar-indicator"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-medical-primary"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#007BFF]"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
@@ -91,15 +88,15 @@ const Navbar: React.FC = () => {
               )}
             </Link>
           ))}
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button
               variant="default"
               size="sm"
-              className="bg-medical-primary hover:bg-medical-dark transition-all duration-300"
+              className="bg-[#007BFF] hover:bg-blue-700 transition-all duration-300"
             >
-              Get in Touch
+              Request a Quote
             </Button>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -110,8 +107,10 @@ const Navbar: React.FC = () => {
         >
           <button
             onClick={toggleMenu}
-            className="text-medical-gray p-2 rounded-full hover:bg-gray-100 transition-all"
+            className="text-gray-700 p-2 rounded-full hover:bg-gray-100 transition-all"
             aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -122,6 +121,7 @@ const Navbar: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-menu"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -131,9 +131,9 @@ const Navbar: React.FC = () => {
             <div className="container-custom py-4 flex flex-col space-y-5">
               {[
                 { path: "/", label: "Home" },
+                { path: "/products", label: "Products" },
                 { path: "/about", label: "About Us" },
-                { path: "/services", label: "Services" },
-                { path: "/facilities", label: "Facilities" },
+                { path: "/partners", label: "Partners" },
                 { path: "/contact", label: "Contact" },
               ].map((item) => (
                 <motion.div
@@ -143,11 +143,10 @@ const Navbar: React.FC = () => {
                 >
                   <Link
                     to={item.path}
-                    className={`block text-medical-darkGray hover:text-medical-primary transition duration-300 py-2 ${
-                      isActive(item.path)
-                        ? "text-medical-primary font-medium"
-                        : ""
+                    className={`block text-gray-700 hover:text-[#007BFF] transition duration-300 py-2 ${
+                      isActive(item.path) ? "text-[#007BFF] font-medium" : ""
                     }`}
+                    aria-current={isActive(item.path) ? "page" : undefined}
                   >
                     {item.label}
                   </Link>
@@ -161,9 +160,9 @@ const Navbar: React.FC = () => {
                 <Button
                   variant="default"
                   size="sm"
-                  className="bg-medical-primary hover:bg-medical-dark w-full transition-all duration-300"
+                  className="bg-[#007BFF] hover:bg-blue-700 w-full transition-all duration-300"
                 >
-                  Get in Touch
+                  Request a Quote
                 </Button>
               </motion.div>
             </div>

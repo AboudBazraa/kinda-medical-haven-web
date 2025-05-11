@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -75,7 +74,12 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display font-bold;
   }
 }
@@ -95,5 +99,61 @@
   }
   .section-subtitle {
     @apply text-xl text-medical-gray mb-8 max-w-2xl mx-auto;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.lazy-section {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Fallback for browsers that don't support animations */
+.no-js .lazy-section {
+  opacity: 1;
+}
+
+/* Make sure all sections are visible by default after page is fully loaded */
+html.loaded .lazy-section {
+  opacity: 1;
+}
+
+/* Performance optimizations */
+img,
+svg {
+  will-change: transform;
+}
+
+.motion-reduce * {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .lazy-section {
+    opacity: 1 !important;
   }
 }
